@@ -1,0 +1,89 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import 'bootstrap';
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+a {
+    color: #000;
+    text-decoration: none;
+    background-color: transparent;
+}
+.header {
+    width: 100%;
+    height: 70px;
+    padding: 4px 30px;
+    background-color: #000000;
+}
+.header-left-nav {
+    float: left;
+}
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+.header-left-nav form {
+    display: inline-block;
+}
+.header-sharch {
+    position: relative;
+}
+.header-left-nav .form-control {
+    width: 180px;
+    display: inline-block;
+    position: relative;
+    border-radius: 2px;
+    padding-left: 30px;
+}
+.header i {
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    font-size: 18px;
+}
+.header-right-nav {
+    float: right;
+}
+.notifications {
+    color: #fff;
+    text-align: center;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 180px;
+    margin-top: 64px;
+    padding-top: 90px;
+    background-color: #111;
+    box-sizing: border-box;
+    color: #fff;
+    text-align: center;
+    display: block;
+}
+.footerFixed{
+    min-height: 50vh; 
+    position: relative;
+    padding-bottom: 180px; 
+    box-sizing: border-box; 
+}
+.notifications {
+    color: #fff;
+    text-align: center;
+}
+.notifications .notice {
+    background-color: lightBlue;
+}
