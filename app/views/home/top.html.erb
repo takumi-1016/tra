@@ -1,2 +1,43 @@
-<h1>Home#top</h1>
-<p>Find me in app/views/home/top.html.erb</p>
+<div class="top">
+    <div class="top-main">
+        <div class="container">
+            <div class="row col-lg-6">
+                <div class="form-fream">
+                    <div class="form-area">
+                        <p class="form-area-title mb-4">Potepan Shareでまだ体験したことのない旅をしよう</p>
+                        <form action="https://presite-potepancamp-rails-02.herokuapp.com/rooms/search" accept-charset="UTF-8" method="get">
+                            <label for="___">エリア</label>
+                            <input type="text" name="area" id="area" value="" class="form-control mb-4" placeholder="東京">
+                            <input type="submit" name="commit" value="探す" class="form-control btn-primary mb-4" data-disable-with="探す">
+                        </form>                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="panel-area m-5">
+            <h1 class="section-title">おすすめのエリア</h1>
+            <div class="row">
+                <div class="panel-item col-lg-3 col-6">
+                    東京
+                    <%= link_to image_tag("tokyo.png",class:"panel-image"), '/'%>
+                    <div class="shadow"></div>
+                </div>
+                <div class="panel-item col-lg-3 col-6">
+                    大阪
+                    <%= link_to image_tag("osaka.webp",class:"panel-image"), '/'%>
+                </div>
+                <div class="panel-item col-lg-3 col-6">
+                    京都
+                    <%= link_to image_tag("kyoto.jpeg",class:"panel-image"), '/'%>
+                    <div class="shadow"></div>
+                </div>
+                <div class="panel-item col-lg-3 col-6">
+                    札幌
+                    <%= link_to image_tag("sapporo.jpeg",class:"panel-image"), '/'%>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

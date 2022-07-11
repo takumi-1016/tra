@@ -11,6 +11,54 @@
   </head>
 
   <body>
+    <header class="header">
+      <div class="header-inner">
+        <div class="header-left-nav">
+          <a href="/"><img alt="サイトのロゴ画像" src="https://presite-potepancamp-rails-02.herokuapp.com/assets/logo.png"></a>
+          <form action="https://presite-potepancamp-rails-02.herokuapp.com/rooms/search" accept-charset="UTF-8" method="get">
+            <div class="header-sharch d-lg-inline-block d-none">
+              <input type="text" name="area" id="area" value="" class="form-control" placeholder="エリア">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="header-sharch d-lg-inline-block d-none">
+              <input type="text" name="keyword" id="keyword" value="" class="form-control" placeholder="キーワード">
+              <i class="fas fa-search"></i>
+            </div>
+            <input type="submit" name="commit" value="" class="d-none" data-disable-with="">
+          </form>    
+        </div>
+        <div class="header-right-nav">
+          <div class="nav-item d-sm-inline-block d-none">
+            匠
+          </div>
+          <div class="nav-item">
+            <img class="mx-3 p-1 host-icon nav-trigger" alt="メニュー" src="/uploads/user/image/1576/F2C4E3CC-3BF4-4646-B593-48172D4353C6.jpeg">
+            <ul class="header-nav-menu">
+              
+              <% if current_user%>           
+                <li><%= link_to "ルーム登録", new_room_path%></li>
+                <li><%= link_to '予約済みルーム一覧', reservations_path %></li>
+                <li><%= link_to '登録済みルーム一覧', rooms_path %></li>
+                <li></li>
+                <li><%= link_to destroy_session_path, method: :delete %></li>
+              <% else %>
+                <li><%= link_to 'ログイン', login_path%></li>
+                <li><%= link_to '新規登録', new_user_path%></li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="notifications">
+    </div>
+    
     <%= yield %>
+
+    <div class="footerFixed">
+      <footer class="footer">
+      <p>© 2020 POTEPAN.INC.</p>
+      </footer>
+    </div>
   </body>
 </html>
